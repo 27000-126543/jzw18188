@@ -18,6 +18,12 @@ function AppInit() {
   useEffect(() => {
     fetchUsers();
     fetchNotifications();
+
+    const interval = setInterval(() => {
+      fetchNotifications();
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, [fetchUsers, fetchNotifications]);
 
   return null;

@@ -1,4 +1,4 @@
-import { store } from "../db/store";
+import { store, scheduleSave } from "../db/store";
 import { nanoid } from "../db/seed";
 import type { SalesTarget } from "../../shared/types";
 
@@ -25,6 +25,7 @@ export const targetsService = {
       achievedCount: data.achievedCount || 0,
     };
     store.salesTargets.push(target);
+    scheduleSave();
     return target;
   },
 
@@ -32,6 +33,7 @@ export const targetsService = {
     const idx = store.salesTargets.findIndex((t) => t.id === id);
     if (idx === -1) return undefined;
     store.salesTargets[idx] = { ...store.salesTargets[idx], ...data };
+    scheduleSave();
     return store.salesTargets[idx];
   },
 };

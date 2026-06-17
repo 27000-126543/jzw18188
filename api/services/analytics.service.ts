@@ -9,7 +9,16 @@ import { STAGE_ORDER, STAGE_LABELS } from "../../shared/types";
 
 export const analyticsService = {
   funnel(): FunnelData[] {
-    const counts: Record<LeadStage, number> = {
+    const enteredLeads: Record<LeadStage, Set<string>> = {
+      initial: new Set(),
+      needs: new Set(),
+      proposal: new Set(),
+      negotiation: new Set(),
+      won: new Set(),
+      lost: new Set(),
+    };
+
+    const currentCounts: Record<LeadStage, number> = {
       initial: 0,
       needs: 0,
       proposal: 0,
@@ -27,18 +36,37 @@ export const analyticsService = {
     };
 
     store.leads.forEach((l) => {
-      counts[l.stage] += 1;
+      currentCounts[l.stage] += 1;
       values[l.stage] += l.estimatedValue;
     });
 
+    store.stageHistory.forEach((h) => {
+      enteredLeads[h.stage].add(h.leadId);
+    });
+
+    const enteredCounts: Record<LeadStage, number> = {
+      initial: enteredLeads.initial.size,
+      needs: enteredLeads.needs.size,
+      proposal: enteredLeads.proposal.size,
+      negotiation: enteredLeads.negotiation.size,
+      won: enteredLeads.won.size,
+      lost: enteredLeads.lost.size,
+    };
+
     const result: FunnelData[] = STAGE_ORDER.map((stage, idx) => {
-      const prevCount = idx === 0 ? counts[stage] : counts[STAGE_ORDER[idx - 1]];
-      const conversionRate = prevCount > 0 ? (counts[stage] / prevCount) * 100 : 0;
+      let conversionRate: number;
+      if (idx === 0) {
+        conversionRate = 100;
+      } else {
+        const prevStage = STAGE_ORDER[idx - 1];
+        const prevEntered = enteredCounts[prevStage];
+        conversionRate = prevEntered > 0 ? (enteredCounts[stage] / prevEntered) * 100 : 0;
+      }
       return {
         stage,
         stageLabel: STAGE_LABELS[stage],
-        count: counts[stage],
-        conversionRate: Math.round(conversionRate * 10) / 10,
+        count: currentCounts[stage],
+        conversionRate: Math.min(100, Math.round(conversionRate * 10) / 10),
         value: values[stage],
       };
     });

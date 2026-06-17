@@ -8,6 +8,8 @@ import {
   useSensor,
   useSensors,
   DragEndEvent,
+  DragOverEvent,
+  useDroppable,
 } from "@dnd-kit/core";
 import {
   SortableContext,
@@ -16,7 +18,7 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Plus, Search, Filter, Snowflake } from "lucide-react";
+import { Plus, Search, Snowflake } from "lucide-react";
 import { useAppStore } from "@/store/useAppStore";
 import { api } from "@/api/client";
 import StageBadge from "@/components/StageBadge";
@@ -104,10 +106,16 @@ function LeadCard({ lead }: { lead: Lead }) {
 function StageColumn({
   stage,
   leads,
+  isOver,
 }: {
   stage: LeadStage;
   leads: Lead[];
+  isOver: boolean;
 }) {
+  const { setNodeRef } = useDroppable({
+    id: `column-${stage}`,
+  });
+
   const columnStyles: Record<LeadStage, string> = {
     initial: "bg-slate-50 border-slate-200",
     needs: "bg-brand-50 border-brand-200",
@@ -128,7 +136,10 @@ function StageColumn({
 
   return (
     <div
-      className={`flex flex-col rounded-xl border ${columnStyles[stage]} min-h-[400px]`}
+      ref={setNodeRef}
+      className={`flex flex-col rounded-xl border ${columnStyles[stage]} min-h-[400px] transition-all duration-200 ${
+        isOver ? "ring-2 ring-brand-400 ring-offset-2" : ""
+      }`}
     >
       <div className="p-3 border-b border-white/60">
         <div className="flex items-center justify-between">
@@ -154,17 +165,23 @@ function StageColumn({
             <LeadCard key={lead.id} lead={lead} />
           ))}
         </SortableContext>
+        {leads.length === 0 && (
+          <div className="flex items-center justify-center h-32 text-xs text-slate-400 border-2 border-dashed border-slate-200 rounded-lg">
+            拖拽线索到此处
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
 export default function LeadBoard() {
-  const { leads, fetchLeads, users } = useAppStore();
+  const { leads, fetchLeads, users, fetchNotifications } = useAppStore();
   const [showCreate, setShowCreate] = useState(false);
   const [search, setSearch] = useState("");
   const [filterOwner, setFilterOwner] = useState("");
   const [filterSource, setFilterSource] = useState("");
+  const [activeColumn, setActiveColumn] = useState<string | null>(null);
   const [form, setForm] = useState({
     companyName: "",
     contactName: "",
@@ -204,31 +221,50 @@ export default function LeadBoard() {
     return grouped;
   }, [leads]);
 
+  const handleDragOver = (event: DragOverEvent) => {
+    const { over } = event;
+    if (over && String(over.id).startsWith("column-")) {
+      setActiveColumn(String(over.id));
+    } else if (over) {
+      for (const stage of STAGE_ORDER) {
+        if (groupedLeads[stage].some((l) => l.id === String(over.id))) {
+          setActiveColumn(`column-${stage}`);
+          break;
+        }
+      }
+    }
+  };
+
   const handleDragEnd = async (event: DragEndEvent) => {
     const { active, over } = event;
+    setActiveColumn(null);
     if (!over) return;
 
     const leadId = String(active.id);
     let targetStage: LeadStage | null = null;
 
-    for (const stage of STAGE_ORDER) {
-      if (groupedLeads[stage].some((l) => l.id === String(over.id))) {
-        targetStage = stage;
-        break;
+    if (String(over.id).startsWith("column-")) {
+      targetStage = String(over.id).replace("column-", "") as LeadStage;
+    } else {
+      for (const stage of STAGE_ORDER) {
+        if (groupedLeads[stage].some((l) => l.id === String(over.id))) {
+          targetStage = stage;
+          break;
+        }
       }
-    }
-    if (over.id && STAGE_ORDER.includes(String(over.id) as LeadStage)) {
-      targetStage = String(over.id) as LeadStage;
     }
 
     const lead = leads.find((l) => l.id === leadId);
     if (targetStage && lead && lead.stage !== targetStage) {
       await api.leads.changeStage(leadId, targetStage);
-      await fetchLeads({
-        search: search || undefined,
-        ownerId: filterOwner || undefined,
-        source: (filterSource as LeadSource) || undefined,
-      });
+      await Promise.all([
+        fetchLeads({
+          search: search || undefined,
+          ownerId: filterOwner || undefined,
+          source: (filterSource as LeadSource) || undefined,
+        }),
+        fetchNotifications(),
+      ]);
     }
   };
 
@@ -301,17 +337,17 @@ export default function LeadBoard() {
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}
+        onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-4">
           {STAGE_ORDER.map((stage) => (
             <div key={stage} data-stage={stage}>
-              <SortableContext
-                items={[stage, ...groupedLeads[stage].map((l) => l.id)]}
-                strategy={verticalListSortingStrategy}
-              >
-                <StageColumn stage={stage} leads={groupedLeads[stage]} />
-              </SortableContext>
+              <StageColumn
+                stage={stage}
+                leads={groupedLeads[stage]}
+                isOver={activeColumn === `column-${stage}`}
+              />
             </div>
           ))}
         </div>

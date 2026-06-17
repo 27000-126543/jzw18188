@@ -1,4 +1,4 @@
-import { store } from "../db/store";
+import { store, scheduleSave } from "../db/store";
 import type { Notification } from "../../shared/types";
 
 const CURRENT_USER_ID = "u4";
@@ -24,6 +24,7 @@ export const notificationsService = {
     const n = store.notifications.find((x) => x.id === id);
     if (!n) return undefined;
     n.read = true;
+    scheduleSave();
     return n;
   },
 };

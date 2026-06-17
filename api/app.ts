@@ -15,13 +15,19 @@ import { analyticsRouter } from "./routes/analytics.js";
 import { targetsRouter } from "./routes/targets.js";
 import { notificationsRouter } from "./routes/notifications.js";
 import { seedDatabase } from "./db/seed.js";
+import { loadFromFile } from "./db/store.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
-seedDatabase();
+const loaded = loadFromFile();
+if (!loaded) {
+  seedDatabase();
+} else {
+  console.log("Loaded data from db.json file");
+}
 
 const app: express.Application = express();
 

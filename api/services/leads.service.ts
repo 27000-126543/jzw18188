@@ -1,4 +1,4 @@
-import { store } from "../db/store";
+import { store, scheduleSave } from "../db/store";
 import { nanoid } from "../db/seed";
 import type {
   Lead,
@@ -84,6 +84,7 @@ export const leadsService = {
       enteredAt: now,
     });
 
+    scheduleSave();
     return computeCooling(lead);
   },
 
@@ -92,6 +93,7 @@ export const leadsService = {
     if (idx === -1) return undefined;
     const now = new Date().toISOString();
     store.leads[idx] = { ...store.leads[idx], ...data, updatedAt: now };
+    scheduleSave();
     return computeCooling(store.leads[idx]);
   },
 
@@ -141,6 +143,7 @@ export const leadsService = {
       });
     }
 
+    scheduleSave();
     return computeCooling(lead);
   },
 
@@ -176,6 +179,7 @@ export const leadsService = {
       target.achievedCount += 1;
     }
 
+    scheduleSave();
     return customer;
   },
 
@@ -212,6 +216,7 @@ export const leadsService = {
     lead.lastFollowUpAt = now;
     lead.updatedAt = now;
 
+    scheduleSave();
     return comm;
   },
 

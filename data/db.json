@@ -1,0 +1,1378 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "张伟",
+      "email": "zhangwei@example.com",
+      "role": "sales"
+    },
+    {
+      "id": "u2",
+      "name": "李娜",
+      "email": "lina@example.com",
+      "role": "sales"
+    },
+    {
+      "id": "u3",
+      "name": "王磊",
+      "email": "wanglei@example.com",
+      "role": "sales"
+    },
+    {
+      "id": "u4",
+      "name": "陈敏",
+      "email": "chenmin@example.com",
+      "role": "manager"
+    }
+  ],
+  "leads": [
+    {
+      "id": "l1",
+      "companyName": "星辰科技有限公司",
+      "contactName": "刘建国",
+      "contactTitle": "采购总监",
+      "phone": "13881392828",
+      "email": "contact1@company1.com",
+      "address": "上海市浦东新区世纪大道100号",
+      "source": "website",
+      "stage": "initial",
+      "ownerId": "u1",
+      "estimatedValue": 222838,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-16T17:03:27.829Z",
+      "updatedAt": "2026-06-15T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-15T17:03:27.830Z"
+    },
+    {
+      "id": "l2",
+      "companyName": "蓝海数字传媒",
+      "contactName": "赵晓芳",
+      "contactTitle": "市场经理",
+      "phone": "13831684304",
+      "email": "contact2@company2.com",
+      "address": "上海市浦东新区世纪大道101号",
+      "source": "expo",
+      "stage": "needs",
+      "ownerId": "u2",
+      "estimatedValue": 795776,
+      "isCooling": true,
+      "coolingDays": 14,
+      "createdAt": "2026-05-14T17:03:27.830Z",
+      "updatedAt": "2026-06-03T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-03T17:03:27.830Z"
+    },
+    {
+      "id": "l3",
+      "companyName": "云翼网络服务",
+      "contactName": "孙明辉",
+      "contactTitle": "技术负责人",
+      "phone": "13821482545",
+      "email": "contact3@company3.com",
+      "address": "上海市浦东新区世纪大道102号",
+      "source": "referral",
+      "stage": "proposal",
+      "ownerId": "u3",
+      "estimatedValue": 905104,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-18T17:03:27.830Z",
+      "updatedAt": "2026-06-16T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-16T17:03:27.830Z"
+    },
+    {
+      "id": "l4",
+      "companyName": "绿洲环保科技",
+      "contactName": "周美玲",
+      "contactTitle": "运营总监",
+      "phone": "13834957889",
+      "email": "contact4@company4.com",
+      "address": "上海市浦东新区世纪大道103号",
+      "source": "website",
+      "stage": "negotiation",
+      "ownerId": "u1",
+      "estimatedValue": 853985,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-06-02T17:03:27.830Z",
+      "updatedAt": "2026-06-12T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-12T17:03:27.830Z"
+    },
+    {
+      "id": "l5",
+      "companyName": "金鹰国际贸易",
+      "contactName": "吴志强",
+      "contactTitle": "副总裁",
+      "phone": "13847171012",
+      "email": "contact5@company5.com",
+      "address": "上海市浦东新区世纪大道104号",
+      "source": "expo",
+      "stage": "won",
+      "ownerId": "u2",
+      "estimatedValue": 130231,
+      "isCooling": true,
+      "coolingDays": 13,
+      "createdAt": "2026-05-10T17:03:27.830Z",
+      "updatedAt": "2026-06-04T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-04T17:03:27.830Z"
+    },
+    {
+      "id": "l6",
+      "companyName": "锐思咨询顾问",
+      "contactName": "郑雅琴",
+      "contactTitle": "CTO",
+      "phone": "13841071230",
+      "email": "contact6@company6.com",
+      "address": "上海市浦东新区世纪大道105号",
+      "source": "referral",
+      "stage": "lost",
+      "ownerId": "u3",
+      "estimatedValue": 349121,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-28T17:03:27.830Z",
+      "updatedAt": "2026-06-10T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-10T17:03:27.830Z"
+    },
+    {
+      "id": "l7",
+      "companyName": "华瑞医疗器械",
+      "contactName": "冯志远",
+      "contactTitle": "CEO",
+      "phone": "13886732350",
+      "email": "contact7@company7.com",
+      "address": "上海市浦东新区世纪大道106号",
+      "source": "website",
+      "stage": "initial",
+      "ownerId": "u1",
+      "estimatedValue": 980503,
+      "isCooling": true,
+      "coolingDays": 13,
+      "createdAt": "2026-05-10T17:03:27.830Z",
+      "updatedAt": "2026-06-04T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-04T17:03:27.830Z"
+    },
+    {
+      "id": "l8",
+      "companyName": "鼎盛建筑工程",
+      "contactName": "黄丽娟",
+      "contactTitle": "行政主管",
+      "phone": "13832232219",
+      "email": "contact8@company8.com",
+      "address": "上海市浦东新区世纪大道107号",
+      "source": "expo",
+      "stage": "needs",
+      "ownerId": "u2",
+      "estimatedValue": 195234,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-12T17:03:27.830Z",
+      "updatedAt": "2026-06-17T17:03:27.830Z"
+    },
+    {
+      "id": "l9",
+      "companyName": "新视野广告",
+      "contactName": "何鹏飞",
+      "contactTitle": "销售总监",
+      "phone": "13877927171",
+      "email": "contact9@company9.com",
+      "address": "上海市浦东新区世纪大道108号",
+      "source": "referral",
+      "stage": "proposal",
+      "ownerId": "u3",
+      "estimatedValue": 560425,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-06-06T17:03:27.830Z",
+      "updatedAt": "2026-06-17T17:03:27.830Z"
+    },
+    {
+      "id": "l10",
+      "companyName": "智联软件",
+      "contactName": "罗婉清",
+      "contactTitle": "财务经理",
+      "phone": "13856159581",
+      "email": "contact10@company10.com",
+      "address": "上海市浦东新区世纪大道109号",
+      "source": "website",
+      "stage": "negotiation",
+      "ownerId": "u1",
+      "estimatedValue": 405628,
+      "isCooling": true,
+      "coolingDays": 13,
+      "createdAt": "2026-06-05T17:03:27.830Z",
+      "updatedAt": "2026-06-05T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-04T17:03:27.830Z"
+    },
+    {
+      "id": "l11",
+      "companyName": "卓越教育集团",
+      "contactName": "梁俊峰",
+      "contactTitle": "采购总监",
+      "phone": "13826024404",
+      "email": "contact11@company11.com",
+      "address": "上海市浦东新区世纪大道110号",
+      "source": "expo",
+      "stage": "won",
+      "ownerId": "u2",
+      "estimatedValue": 831877,
+      "isCooling": true,
+      "coolingDays": 8,
+      "createdAt": "2026-05-21T17:03:27.830Z",
+      "updatedAt": "2026-06-09T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-09T17:03:27.830Z"
+    },
+    {
+      "id": "l12",
+      "companyName": "锦绣餐饮连锁",
+      "contactName": "谢红梅",
+      "contactTitle": "市场经理",
+      "phone": "13867009414",
+      "email": "contact12@company12.com",
+      "address": "上海市浦东新区世纪大道111号",
+      "source": "referral",
+      "stage": "lost",
+      "ownerId": "u3",
+      "estimatedValue": 442876,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-21T17:03:27.830Z",
+      "updatedAt": "2026-06-15T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-15T17:03:27.830Z"
+    },
+    {
+      "id": "l13",
+      "companyName": "恒通物流",
+      "contactName": "唐浩然",
+      "contactTitle": "技术负责人",
+      "phone": "13818676238",
+      "email": "contact13@company13.com",
+      "address": "上海市浦东新区世纪大道112号",
+      "source": "website",
+      "stage": "initial",
+      "ownerId": "u1",
+      "estimatedValue": 627907,
+      "isCooling": true,
+      "coolingDays": 8,
+      "createdAt": "2026-05-10T17:03:27.830Z",
+      "updatedAt": "2026-06-09T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-09T17:03:27.830Z"
+    },
+    {
+      "id": "l14",
+      "companyName": "博远地产",
+      "contactName": "韩雪梅",
+      "contactTitle": "运营总监",
+      "phone": "13857548890",
+      "email": "contact14@company14.com",
+      "address": "上海市浦东新区世纪大道113号",
+      "source": "expo",
+      "stage": "needs",
+      "ownerId": "u2",
+      "estimatedValue": 686749,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-27T17:03:27.830Z",
+      "updatedAt": "2026-06-14T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-14T17:03:27.830Z"
+    },
+    {
+      "id": "l15",
+      "companyName": "雅集文化传播",
+      "contactName": "曹立新",
+      "contactTitle": "副总裁",
+      "phone": "13832470293",
+      "email": "contact15@company15.com",
+      "address": "上海市浦东新区世纪大道114号",
+      "source": "referral",
+      "stage": "proposal",
+      "ownerId": "u3",
+      "estimatedValue": 879471,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-05-09T17:03:27.830Z",
+      "updatedAt": "2026-06-15T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-15T17:03:27.830Z"
+    },
+    {
+      "id": "l16",
+      "companyName": "正泰电气",
+      "contactName": "邓淑芬",
+      "contactTitle": "CTO",
+      "phone": "13835995451",
+      "email": "contact16@company16.com",
+      "address": "上海市浦东新区世纪大道115号",
+      "source": "website",
+      "stage": "negotiation",
+      "ownerId": "u1",
+      "estimatedValue": 532234,
+      "isCooling": true,
+      "coolingDays": 10,
+      "createdAt": "2026-05-18T17:03:27.830Z",
+      "updatedAt": "2026-06-07T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-07T17:03:27.830Z"
+    },
+    {
+      "id": "l17",
+      "companyName": "汇通金融",
+      "contactName": "许文杰",
+      "contactTitle": "CEO",
+      "phone": "13848132994",
+      "email": "contact17@company17.com",
+      "address": "上海市浦东新区世纪大道116号",
+      "source": "expo",
+      "stage": "won",
+      "ownerId": "u2",
+      "estimatedValue": 361382,
+      "isCooling": true,
+      "coolingDays": 10,
+      "createdAt": "2026-05-05T17:03:27.830Z",
+      "updatedAt": "2026-06-07T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-07T17:03:27.830Z"
+    },
+    {
+      "id": "l18",
+      "companyName": "开元汽车",
+      "contactName": "傅丽萍",
+      "contactTitle": "行政主管",
+      "phone": "13847395032",
+      "email": "contact18@company18.com",
+      "address": "上海市浦东新区世纪大道117号",
+      "source": "referral",
+      "stage": "lost",
+      "ownerId": "u3",
+      "estimatedValue": 279097,
+      "isCooling": true,
+      "coolingDays": 10,
+      "createdAt": "2026-05-15T17:03:27.830Z",
+      "updatedAt": "2026-06-07T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-07T17:03:27.830Z"
+    },
+    {
+      "id": "l19",
+      "companyName": "美景旅游",
+      "contactName": "沈德昌",
+      "contactTitle": "销售总监",
+      "phone": "13856714369",
+      "email": "contact19@company19.com",
+      "address": "上海市浦东新区世纪大道118号",
+      "source": "website",
+      "stage": "initial",
+      "ownerId": "u1",
+      "estimatedValue": 645948,
+      "isCooling": true,
+      "coolingDays": 10,
+      "createdAt": "2026-06-12T17:03:27.830Z",
+      "updatedAt": "2026-06-12T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-07T17:03:27.830Z"
+    },
+    {
+      "id": "l20",
+      "companyName": "润泽食品",
+      "contactName": "曾慧敏",
+      "contactTitle": "财务经理",
+      "phone": "13859459935",
+      "email": "contact20@company20.com",
+      "address": "上海市浦东新区世纪大道119号",
+      "source": "expo",
+      "stage": "needs",
+      "ownerId": "u2",
+      "estimatedValue": 824462,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-06-03T17:03:27.830Z",
+      "updatedAt": "2026-06-15T17:03:27.830Z",
+      "lastFollowUpAt": "2026-06-15T17:03:27.830Z"
+    },
+    {
+      "id": "n-NHwQeKb6_UuUbfYT4z2",
+      "companyName": "???????",
+      "contactName": "????",
+      "phone": "13900000000",
+      "email": "test@test.com",
+      "source": "website",
+      "stage": "initial",
+      "ownerId": "u1",
+      "estimatedValue": 500000,
+      "isCooling": false,
+      "coolingDays": 0,
+      "createdAt": "2026-06-17T17:04:30.962Z",
+      "updatedAt": "2026-06-17T17:04:30.962Z"
+    }
+  ],
+  "communications": [
+    {
+      "id": "cl1-0",
+      "leadId": "l1",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-08T19:03:27.830Z"
+    },
+    {
+      "id": "cl1-1",
+      "leadId": "l1",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-09T07:03:27.830Z"
+    },
+    {
+      "id": "cl1-2",
+      "leadId": "l1",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-02T05:03:27.830Z"
+    },
+    {
+      "id": "cl1-3",
+      "leadId": "l1",
+      "type": "phone",
+      "content": "客户来访公司，参观了产品演示室，对产品性能满意。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-10T03:03:27.830Z"
+    },
+    {
+      "id": "cl2-0",
+      "leadId": "l2",
+      "type": "phone",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-04T12:03:27.830Z"
+    },
+    {
+      "id": "cl3-0",
+      "leadId": "l3",
+      "type": "phone",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-10T23:03:27.830Z"
+    },
+    {
+      "id": "cl4-0",
+      "leadId": "l4",
+      "type": "phone",
+      "content": "客户来访公司，参观了产品演示室，对产品性能满意。",
+      "createdBy": "u1",
+      "createdAt": "2026-05-31T23:03:27.830Z"
+    },
+    {
+      "id": "cl5-0",
+      "leadId": "l5",
+      "type": "phone",
+      "content": "电话跟进需求确认，客户希望增加定制化功能。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-13T06:03:27.830Z"
+    },
+    {
+      "id": "cl5-1",
+      "leadId": "l5",
+      "type": "email",
+      "content": "上门拜访，与技术团队讨论方案细节，客户提出修改意见。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-06T13:03:27.830Z"
+    },
+    {
+      "id": "cl5-2",
+      "leadId": "l5",
+      "type": "visit",
+      "content": "邮件发送修改后的方案，客户正在内部评估。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-01T20:03:27.830Z"
+    },
+    {
+      "id": "cl5-3",
+      "leadId": "l5",
+      "type": "phone",
+      "content": "谈判会议，就价格和交付周期进行协商，客户希望有10%折扣。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-11T13:03:27.830Z"
+    },
+    {
+      "id": "cl6-0",
+      "leadId": "l6",
+      "type": "phone",
+      "content": "上门拜访，与技术团队讨论方案细节，客户提出修改意见。",
+      "createdBy": "u1",
+      "createdAt": "2026-05-29T11:03:27.830Z"
+    },
+    {
+      "id": "cl7-0",
+      "leadId": "l7",
+      "type": "phone",
+      "content": "邮件发送修改后的方案，客户正在内部评估。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-10T00:03:27.830Z"
+    },
+    {
+      "id": "cl7-1",
+      "leadId": "l7",
+      "type": "email",
+      "content": "谈判会议，就价格和交付周期进行协商，客户希望有10%折扣。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-03T23:03:27.830Z"
+    },
+    {
+      "id": "cl7-2",
+      "leadId": "l7",
+      "type": "visit",
+      "content": "电话沟通合同条款，客户法务正在审核。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-05T12:03:27.830Z"
+    },
+    {
+      "id": "cl8-0",
+      "leadId": "l8",
+      "type": "phone",
+      "content": "谈判会议，就价格和交付周期进行协商，客户希望有10%折扣。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-12T04:03:27.830Z"
+    },
+    {
+      "id": "cl9-0",
+      "leadId": "l9",
+      "type": "phone",
+      "content": "电话沟通合同条款，客户法务正在审核。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-17T05:03:27.830Z"
+    },
+    {
+      "id": "cl10-0",
+      "leadId": "l10",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-12T06:03:27.830Z"
+    },
+    {
+      "id": "cl10-1",
+      "leadId": "l10",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-15T16:03:27.830Z"
+    },
+    {
+      "id": "cl10-2",
+      "leadId": "l10",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-05-30T03:03:27.830Z"
+    },
+    {
+      "id": "cl11-0",
+      "leadId": "l11",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-07T04:03:27.830Z"
+    },
+    {
+      "id": "cl11-1",
+      "leadId": "l11",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-01T07:03:27.830Z"
+    },
+    {
+      "id": "cl12-0",
+      "leadId": "l12",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-09T04:03:27.830Z"
+    },
+    {
+      "id": "cl12-1",
+      "leadId": "l12",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-14T03:03:27.830Z"
+    },
+    {
+      "id": "cl13-0",
+      "leadId": "l13",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-09T07:03:27.830Z"
+    },
+    {
+      "id": "cl13-1",
+      "leadId": "l13",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-02T16:03:27.830Z"
+    },
+    {
+      "id": "cl13-2",
+      "leadId": "l13",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-08T02:03:27.830Z"
+    },
+    {
+      "id": "cl14-0",
+      "leadId": "l14",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-16T04:03:27.830Z"
+    },
+    {
+      "id": "cl15-0",
+      "leadId": "l15",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-03T09:03:27.830Z"
+    },
+    {
+      "id": "cl15-1",
+      "leadId": "l15",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-16T20:03:27.830Z"
+    },
+    {
+      "id": "cl15-2",
+      "leadId": "l15",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-08T17:03:27.830Z"
+    },
+    {
+      "id": "cl15-3",
+      "leadId": "l15",
+      "type": "phone",
+      "content": "客户来访公司，参观了产品演示室，对产品性能满意。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-16T17:03:27.830Z"
+    },
+    {
+      "id": "cl16-0",
+      "leadId": "l16",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-16T15:03:27.830Z"
+    },
+    {
+      "id": "cl17-0",
+      "leadId": "l17",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-05T08:03:27.830Z"
+    },
+    {
+      "id": "cl17-1",
+      "leadId": "l17",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-02T09:03:27.830Z"
+    },
+    {
+      "id": "cl17-2",
+      "leadId": "l17",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-05T21:03:27.830Z"
+    },
+    {
+      "id": "cl18-0",
+      "leadId": "l18",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-05-29T08:03:27.830Z"
+    },
+    {
+      "id": "cl18-1",
+      "leadId": "l18",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-09T19:03:27.830Z"
+    },
+    {
+      "id": "cl18-2",
+      "leadId": "l18",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-08T10:03:27.830Z"
+    },
+    {
+      "id": "cl19-0",
+      "leadId": "l19",
+      "type": "phone",
+      "content": "由于预算原因，客户暂时搁置项目，保持后续联系。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-13T08:03:27.830Z"
+    },
+    {
+      "id": "cl19-1",
+      "leadId": "l19",
+      "type": "email",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u2",
+      "createdAt": "2026-05-28T20:03:27.830Z"
+    },
+    {
+      "id": "cl19-2",
+      "leadId": "l19",
+      "type": "visit",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u3",
+      "createdAt": "2026-06-12T15:03:27.830Z"
+    },
+    {
+      "id": "cl20-0",
+      "leadId": "l20",
+      "type": "phone",
+      "content": "初次电话沟通，客户表示对我们的产品有兴趣，约定下周发详细资料。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-11T15:03:27.830Z"
+    },
+    {
+      "id": "cl20-1",
+      "leadId": "l20",
+      "type": "email",
+      "content": "发送产品报价单及公司介绍邮件，等待客户反馈。",
+      "createdBy": "u2",
+      "createdAt": "2026-06-11T02:03:27.830Z"
+    },
+    {
+      "id": "cl20-2",
+      "leadId": "l20",
+      "type": "visit",
+      "content": "客户来访公司，参观了产品演示室，对产品性能满意。",
+      "createdBy": "u3",
+      "createdAt": "2026-05-30T02:03:27.830Z"
+    },
+    {
+      "id": "cl20-3",
+      "leadId": "l20",
+      "type": "phone",
+      "content": "电话跟进需求确认，客户希望增加定制化功能。",
+      "createdBy": "u1",
+      "createdAt": "2026-06-04T00:03:27.830Z"
+    }
+  ],
+  "stageHistory": [
+    {
+      "id": "sh-l1-0",
+      "leadId": "l1",
+      "stage": "initial",
+      "enteredAt": "2026-05-16T17:03:27.829Z"
+    },
+    {
+      "id": "sh-l2-0",
+      "leadId": "l2",
+      "stage": "initial",
+      "enteredAt": "2026-05-14T17:03:27.830Z",
+      "leftAt": "2026-05-16T17:03:27.830Z",
+      "durationDays": 2
+    },
+    {
+      "id": "sh-l2-1",
+      "leadId": "l2",
+      "stage": "needs",
+      "enteredAt": "2026-05-20T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l3-0",
+      "leadId": "l3",
+      "stage": "initial",
+      "enteredAt": "2026-05-18T17:03:27.830Z",
+      "leftAt": "2026-05-22T17:03:27.830Z",
+      "durationDays": 4
+    },
+    {
+      "id": "sh-l3-1",
+      "leadId": "l3",
+      "stage": "needs",
+      "enteredAt": "2026-05-20T17:03:27.830Z",
+      "leftAt": "2026-05-27T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l3-2",
+      "leadId": "l3",
+      "stage": "proposal",
+      "enteredAt": "2026-05-28T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l4-0",
+      "leadId": "l4",
+      "stage": "initial",
+      "enteredAt": "2026-06-02T17:03:27.830Z",
+      "leftAt": "2026-06-05T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l4-1",
+      "leadId": "l4",
+      "stage": "needs",
+      "enteredAt": "2026-06-07T17:03:27.830Z",
+      "leftAt": "2026-06-10T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l4-2",
+      "leadId": "l4",
+      "stage": "proposal",
+      "enteredAt": "2026-06-14T17:03:27.830Z",
+      "leftAt": "2026-06-17T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l4-3",
+      "leadId": "l4",
+      "stage": "negotiation",
+      "enteredAt": "2026-06-17T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l5-0",
+      "leadId": "l5",
+      "stage": "initial",
+      "enteredAt": "2026-05-10T17:03:27.830Z",
+      "leftAt": "2026-05-15T17:03:27.830Z",
+      "durationDays": 5
+    },
+    {
+      "id": "sh-l5-1",
+      "leadId": "l5",
+      "stage": "needs",
+      "enteredAt": "2026-05-16T17:03:27.830Z",
+      "leftAt": "2026-05-19T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l5-2",
+      "leadId": "l5",
+      "stage": "proposal",
+      "enteredAt": "2026-05-22T17:03:27.830Z",
+      "leftAt": "2026-05-28T17:03:27.830Z",
+      "durationDays": 6
+    },
+    {
+      "id": "sh-l5-3",
+      "leadId": "l5",
+      "stage": "negotiation",
+      "enteredAt": "2026-05-22T17:03:27.830Z",
+      "leftAt": "2026-05-26T17:03:27.830Z",
+      "durationDays": 4
+    },
+    {
+      "id": "sh-l5-4",
+      "leadId": "l5",
+      "stage": "won",
+      "enteredAt": "2026-06-03T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l6-0",
+      "leadId": "l6",
+      "stage": "initial",
+      "enteredAt": "2026-05-28T17:03:27.830Z",
+      "leftAt": "2026-06-01T17:03:27.830Z",
+      "durationDays": 4
+    },
+    {
+      "id": "sh-l6-1",
+      "leadId": "l6",
+      "stage": "needs",
+      "enteredAt": "2026-05-30T17:03:27.830Z",
+      "leftAt": "2026-06-06T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l6-2",
+      "leadId": "l6",
+      "stage": "proposal",
+      "enteredAt": "2026-06-01T17:03:27.830Z",
+      "leftAt": "2026-06-04T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l6-3",
+      "leadId": "l6",
+      "stage": "negotiation",
+      "enteredAt": "2026-06-06T17:03:27.830Z",
+      "leftAt": "2026-06-13T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l6-4",
+      "leadId": "l6",
+      "stage": "won",
+      "enteredAt": "2026-06-21T17:03:27.830Z",
+      "leftAt": "2026-06-30T17:03:27.830Z",
+      "durationDays": 9
+    },
+    {
+      "id": "sh-l6-5",
+      "leadId": "l6",
+      "stage": "lost",
+      "enteredAt": "2026-06-22T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l7-0",
+      "leadId": "l7",
+      "stage": "initial",
+      "enteredAt": "2026-05-10T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l8-0",
+      "leadId": "l8",
+      "stage": "initial",
+      "enteredAt": "2026-05-12T17:03:27.830Z",
+      "leftAt": "2026-05-16T17:03:27.830Z",
+      "durationDays": 4
+    },
+    {
+      "id": "sh-l8-1",
+      "leadId": "l8",
+      "stage": "needs",
+      "enteredAt": "2026-05-15T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l9-0",
+      "leadId": "l9",
+      "stage": "initial",
+      "enteredAt": "2026-06-06T17:03:27.830Z",
+      "leftAt": "2026-06-08T17:03:27.830Z",
+      "durationDays": 2
+    },
+    {
+      "id": "sh-l9-1",
+      "leadId": "l9",
+      "stage": "needs",
+      "enteredAt": "2026-06-09T17:03:27.830Z",
+      "leftAt": "2026-06-16T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l9-2",
+      "leadId": "l9",
+      "stage": "proposal",
+      "enteredAt": "2026-06-16T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l10-0",
+      "leadId": "l10",
+      "stage": "initial",
+      "enteredAt": "2026-06-05T17:03:27.830Z",
+      "leftAt": "2026-06-12T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l10-1",
+      "leadId": "l10",
+      "stage": "needs",
+      "enteredAt": "2026-06-09T17:03:27.830Z",
+      "leftAt": "2026-06-17T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l10-2",
+      "leadId": "l10",
+      "stage": "proposal",
+      "enteredAt": "2026-06-15T17:03:27.830Z",
+      "leftAt": "2026-06-20T17:03:27.830Z",
+      "durationDays": 5
+    },
+    {
+      "id": "sh-l10-3",
+      "leadId": "l10",
+      "stage": "negotiation",
+      "enteredAt": "2026-06-14T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l11-0",
+      "leadId": "l11",
+      "stage": "initial",
+      "enteredAt": "2026-05-21T17:03:27.830Z",
+      "leftAt": "2026-05-29T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l11-1",
+      "leadId": "l11",
+      "stage": "needs",
+      "enteredAt": "2026-05-26T17:03:27.830Z",
+      "leftAt": "2026-06-03T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l11-2",
+      "leadId": "l11",
+      "stage": "proposal",
+      "enteredAt": "2026-05-27T17:03:27.830Z",
+      "leftAt": "2026-05-29T17:03:27.830Z",
+      "durationDays": 2
+    },
+    {
+      "id": "sh-l11-3",
+      "leadId": "l11",
+      "stage": "negotiation",
+      "enteredAt": "2026-06-05T17:03:27.830Z",
+      "leftAt": "2026-06-14T17:03:27.830Z",
+      "durationDays": 9
+    },
+    {
+      "id": "sh-l11-4",
+      "leadId": "l11",
+      "stage": "won",
+      "enteredAt": "2026-06-06T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l12-0",
+      "leadId": "l12",
+      "stage": "initial",
+      "enteredAt": "2026-05-21T17:03:27.830Z",
+      "leftAt": "2026-05-27T17:03:27.830Z",
+      "durationDays": 6
+    },
+    {
+      "id": "sh-l12-1",
+      "leadId": "l12",
+      "stage": "needs",
+      "enteredAt": "2026-05-26T17:03:27.830Z",
+      "leftAt": "2026-06-02T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l12-2",
+      "leadId": "l12",
+      "stage": "proposal",
+      "enteredAt": "2026-05-29T17:03:27.830Z",
+      "leftAt": "2026-06-04T17:03:27.830Z",
+      "durationDays": 6
+    },
+    {
+      "id": "sh-l12-3",
+      "leadId": "l12",
+      "stage": "negotiation",
+      "enteredAt": "2026-06-02T17:03:27.830Z",
+      "leftAt": "2026-06-10T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l12-4",
+      "leadId": "l12",
+      "stage": "won",
+      "enteredAt": "2026-06-14T17:03:27.830Z",
+      "leftAt": "2026-06-19T17:03:27.830Z",
+      "durationDays": 5
+    },
+    {
+      "id": "sh-l12-5",
+      "leadId": "l12",
+      "stage": "lost",
+      "enteredAt": "2026-06-10T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l13-0",
+      "leadId": "l13",
+      "stage": "initial",
+      "enteredAt": "2026-05-10T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l14-0",
+      "leadId": "l14",
+      "stage": "initial",
+      "enteredAt": "2026-05-27T17:03:27.830Z",
+      "leftAt": "2026-05-29T17:03:27.830Z",
+      "durationDays": 2
+    },
+    {
+      "id": "sh-l14-1",
+      "leadId": "l14",
+      "stage": "needs",
+      "enteredAt": "2026-06-02T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l15-0",
+      "leadId": "l15",
+      "stage": "initial",
+      "enteredAt": "2026-05-09T17:03:27.830Z",
+      "leftAt": "2026-05-12T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l15-1",
+      "leadId": "l15",
+      "stage": "needs",
+      "enteredAt": "2026-05-14T17:03:27.830Z",
+      "leftAt": "2026-05-21T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l15-2",
+      "leadId": "l15",
+      "stage": "proposal",
+      "enteredAt": "2026-05-19T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l16-0",
+      "leadId": "l16",
+      "stage": "initial",
+      "enteredAt": "2026-05-18T17:03:27.830Z",
+      "leftAt": "2026-05-23T17:03:27.830Z",
+      "durationDays": 5
+    },
+    {
+      "id": "sh-l16-1",
+      "leadId": "l16",
+      "stage": "needs",
+      "enteredAt": "2026-05-23T17:03:27.830Z",
+      "leftAt": "2026-05-31T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l16-2",
+      "leadId": "l16",
+      "stage": "proposal",
+      "enteredAt": "2026-05-30T17:03:27.830Z",
+      "leftAt": "2026-06-02T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l16-3",
+      "leadId": "l16",
+      "stage": "negotiation",
+      "enteredAt": "2026-05-24T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l17-0",
+      "leadId": "l17",
+      "stage": "initial",
+      "enteredAt": "2026-05-05T17:03:27.830Z",
+      "leftAt": "2026-05-12T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l17-1",
+      "leadId": "l17",
+      "stage": "needs",
+      "enteredAt": "2026-05-09T17:03:27.830Z",
+      "leftAt": "2026-05-16T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l17-2",
+      "leadId": "l17",
+      "stage": "proposal",
+      "enteredAt": "2026-05-13T17:03:27.830Z",
+      "leftAt": "2026-05-17T17:03:27.830Z",
+      "durationDays": 4
+    },
+    {
+      "id": "sh-l17-3",
+      "leadId": "l17",
+      "stage": "negotiation",
+      "enteredAt": "2026-05-11T17:03:27.830Z",
+      "leftAt": "2026-05-20T17:03:27.830Z",
+      "durationDays": 9
+    },
+    {
+      "id": "sh-l17-4",
+      "leadId": "l17",
+      "stage": "won",
+      "enteredAt": "2026-05-25T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l18-0",
+      "leadId": "l18",
+      "stage": "initial",
+      "enteredAt": "2026-05-15T17:03:27.830Z",
+      "leftAt": "2026-05-24T17:03:27.830Z",
+      "durationDays": 9
+    },
+    {
+      "id": "sh-l18-1",
+      "leadId": "l18",
+      "stage": "needs",
+      "enteredAt": "2026-05-20T17:03:27.830Z",
+      "leftAt": "2026-05-23T17:03:27.830Z",
+      "durationDays": 3
+    },
+    {
+      "id": "sh-l18-2",
+      "leadId": "l18",
+      "stage": "proposal",
+      "enteredAt": "2026-05-23T17:03:27.830Z",
+      "leftAt": "2026-05-30T17:03:27.830Z",
+      "durationDays": 7
+    },
+    {
+      "id": "sh-l18-3",
+      "leadId": "l18",
+      "stage": "negotiation",
+      "enteredAt": "2026-05-24T17:03:27.830Z",
+      "leftAt": "2026-06-01T17:03:27.830Z",
+      "durationDays": 8
+    },
+    {
+      "id": "sh-l18-4",
+      "leadId": "l18",
+      "stage": "won",
+      "enteredAt": "2026-05-31T17:03:27.830Z",
+      "leftAt": "2026-06-02T17:03:27.830Z",
+      "durationDays": 2
+    },
+    {
+      "id": "sh-l18-5",
+      "leadId": "l18",
+      "stage": "lost",
+      "enteredAt": "2026-06-04T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l19-0",
+      "leadId": "l19",
+      "stage": "initial",
+      "enteredAt": "2026-06-12T17:03:27.830Z"
+    },
+    {
+      "id": "sh-l20-0",
+      "leadId": "l20",
+      "stage": "initial",
+      "enteredAt": "2026-06-03T17:03:27.830Z",
+      "leftAt": "2026-06-08T17:03:27.830Z",
+      "durationDays": 5
+    },
+    {
+      "id": "sh-l20-1",
+      "leadId": "l20",
+      "stage": "needs",
+      "enteredAt": "2026-06-09T17:03:27.830Z"
+    },
+    {
+      "id": "1V9Z62qUN6VEK_ydHdZVC",
+      "leadId": "n-NHwQeKb6_UuUbfYT4z2",
+      "stage": "initial",
+      "enteredAt": "2026-06-17T17:04:30.962Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust-l5",
+      "leadId": "l5",
+      "companyName": "金鹰国际贸易",
+      "contactName": "吴志强",
+      "phone": "13847171012",
+      "email": "contact5@company5.com",
+      "address": "上海市浦东新区世纪大道104号",
+      "dealValue": 130231,
+      "closedAt": "2026-06-07T17:03:27.831Z",
+      "createdAt": "2026-06-13T17:03:27.831Z"
+    },
+    {
+      "id": "cust-l11",
+      "leadId": "l11",
+      "companyName": "卓越教育集团",
+      "contactName": "梁俊峰",
+      "phone": "13826024404",
+      "email": "contact11@company11.com",
+      "address": "上海市浦东新区世纪大道110号",
+      "dealValue": 831877,
+      "closedAt": "2026-06-15T17:03:27.831Z",
+      "createdAt": "2026-06-06T17:03:27.831Z"
+    },
+    {
+      "id": "cust-l17",
+      "leadId": "l17",
+      "companyName": "汇通金融",
+      "contactName": "许文杰",
+      "phone": "13848132994",
+      "email": "contact17@company17.com",
+      "address": "上海市浦东新区世纪大道116号",
+      "dealValue": 361382,
+      "closedAt": "2026-06-09T17:03:27.831Z",
+      "createdAt": "2026-05-30T17:03:27.831Z"
+    }
+  ],
+  "salesTargets": [
+    {
+      "id": "t1",
+      "userId": "u1",
+      "month": "2026-06",
+      "targetAmount": 1500000,
+      "targetCount": 5,
+      "achievedAmount": 980000,
+      "achievedCount": 3
+    },
+    {
+      "id": "t2",
+      "userId": "u2",
+      "month": "2026-06",
+      "targetAmount": 1200000,
+      "targetCount": 4,
+      "achievedAmount": 760000,
+      "achievedCount": 2
+    },
+    {
+      "id": "t3",
+      "userId": "u3",
+      "month": "2026-06",
+      "targetAmount": 1000000,
+      "targetCount": 4,
+      "achievedAmount": 1250000,
+      "achievedCount": 5
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "userId": "u4",
+      "type": "cooling",
+      "title": "线索冷却提醒",
+      "content": "星辰科技有限公司已超过10天未跟进，请及时联系。",
+      "relatedLeadId": "l1",
+      "read": false,
+      "createdAt": "2026-06-17T15:03:27.831Z"
+    },
+    {
+      "id": "n2",
+      "userId": "u4",
+      "type": "stage_change",
+      "title": "线索阶段推进",
+      "content": "绿洲环保科技已从「方案报价」推进至「谈判」阶段。",
+      "relatedLeadId": "l4",
+      "read": false,
+      "createdAt": "2026-06-17T11:03:27.831Z"
+    },
+    {
+      "id": "n3",
+      "userId": "u4",
+      "type": "lost",
+      "title": "线索流失提醒",
+      "content": "美景旅游标记为流失，请关注团队跟进情况。",
+      "relatedLeadId": "l19",
+      "read": true,
+      "createdAt": "2026-06-16T17:03:27.831Z"
+    },
+    {
+      "id": "n4",
+      "userId": "u1",
+      "type": "cooling",
+      "title": "线索冷却提醒",
+      "content": "博远地产已超过8天未跟进。",
+      "relatedLeadId": "l14",
+      "read": false,
+      "createdAt": "2026-06-17T13:03:27.831Z"
+    }
+  ]
+}
